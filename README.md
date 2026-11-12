@@ -1,46 +1,93 @@
-# Stock Portfolio Analysis Agent (React + AI Integration)
+# InvestIQ – Stock Portfolio Analysis Agent
 
-A learning/demo portfolio dashboard built with React, JavaScript, HTML and CSS, with a small Express API for optional AI-generated portfolio commentary.
+A learning/demo stock portfolio dashboard built using React, JavaScript, HTML, CSS, and AI integration. It helps users manage sample stock holdings, visualize portfolio performance, and generate AI-assisted portfolio commentary.
+
+## Live Demo
+
+**Live Website:** https://invest-iq-stock-portfolio.vercel.app/
+
+**GitHub Repository:** https://github.com/Maheswari-Tunga/InvestIQ-Stock-Portfolio
 
 ## Features
-- Responsive portfolio dashboard
-- Sample portfolio value, illustrative performance chart and allocation chart
-- Add, search and remove stock holdings
-- Calculate holding values and portfolio allocation in the browser
-- AI portfolio commentary through a server-side OpenAI API integration
-- Built-in rule-based demo analysis when no OpenAI key is configured
 
-## Important data note
-This starter uses manually entered/sample prices and illustrative chart history. It does **not** connect to a brokerage account or provide live market prices. The analysis is educational and is not investment advice.
+- Responsive stock portfolio dashboard
+- Portfolio value and performance overview
+- Interactive portfolio performance chart
+- Stock allocation visualization
+- Add, search, and remove stock holdings
+- Automatic calculation of holding values and portfolio allocation
+- AI-powered portfolio commentary
+- Built-in rule-based demo analysis when no OpenAI API key is configured
+- Responsive interface for desktop and mobile devices
+
+## Technologies Used
+
+- **Frontend:** React.js, JavaScript, HTML5, CSS3
+- **Charts:** Recharts
+- **Icons:** Lucide React
+- **Backend:** Node.js, Express.js
+- **AI Integration:** OpenAI API
+- **Development Tools:** VS Code, Git, GitHub, Vite
+- **Deployment:** Vercel
+
+## Important Data Note
+
+This project uses manually entered/sample stock prices and illustrative chart history. It does not connect to brokerage accounts or provide live market prices. The analysis is for educational and demonstration purposes only and is not investment advice.
 
 ## Requirements
+
 - Node.js 18+
 - npm
 
-## Setup
-1. Install dependencies:
+## Installation and Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Maheswari-Tunga/InvestIQ-Stock-Portfolio.git
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd InvestIQ-Stock-Portfolio
+   ```
+
+3. Install dependencies:
+
    ```bash
    npm install
    ```
-2. (Optional) Enable OpenAI:
-   - Copy `.env.example` to `.env`
-   - Add your key to `OPENAI_API_KEY`
-   - Keep the key only in the server environment. Never expose it in frontend code.
-3. Start the API in terminal 1:
+
+4. (Optional) Enable OpenAI integration:
+   - Copy `.env.example` to `.env`.
+   - Add your API key to `OPENAI_API_KEY`.
+   - Keep your API key on the server. Never expose it in frontend code.
+
+5. Start the backend API in terminal 1:
+
    ```bash
    npm run server
    ```
-4. Start the React app in terminal 2:
+
+6. Start the React application in terminal 2:
+
    ```bash
    npm run dev
    ```
-5. Open the local URL printed by Vite (usually `http://localhost:5173`).
 
-If no API key is provided, the API returns a built-in demo analysis. The dashboard still requires the API server to be running for the Analyze button.
+7. Open the local URL printed by Vite, usually:
 
-## Project structure
+   ```text
+   http://localhost:5173
+   ```
+
+If no OpenAI API key is configured, the API uses built-in demo analysis. The Analyze button requires the API server to be running.
+
+## Project Structure
+
 ```text
-stock-portfolio-analysis-agent/
+InvestIQ-Stock-Portfolio/
 ├── server/
 │   └── index.js
 ├── src/
@@ -49,17 +96,24 @@ stock-portfolio-analysis-agent/
 │   ├── main.jsx
 │   └── styles.css
 ├── .env.example
+├── .gitignore
 ├── index.html
 ├── package.json
+├── package-lock.json
+├── README.md
 └── vite.config.js
 ```
 
-## Suggested learning path
-1. Understand the React state in `src/App.jsx`.
-2. Trace how adding/removing holdings updates calculated totals.
-3. Review Recharts components for the performance and allocation visualizations.
-4. Trace the `fetch()` call to `/api/analyze`.
-5. Review `server/index.js` to understand why the OpenAI key stays on the server.
+## Learning Outcomes
+
+- Developed a responsive frontend using React.
+- Implemented component-based UI and state management.
+- Used Recharts to visualize portfolio performance and stock allocation.
+- Implemented CRUD operations for stock holdings.
+- Integrated a React frontend with an Express backend.
+- Explored AI integration using the OpenAI API.
+- Practiced Git, GitHub, and deployment using Vercel.
 
 ## Attribution
-This is an original learning implementation inspired by the general idea of an AI-assisted stock portfolio dashboard. It is not the source code of the linked third-party repository. If you build on another project's code, follow its license and preserve required attribution.
+
+This is an original learning/demo implementation inspired by the general concept of an AI-assisted stock portfolio dashboard. It is not the source code of the linked third-party repository. If you build on another project's code, follow its license and preserve required attribution.
